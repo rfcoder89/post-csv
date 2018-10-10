@@ -1,0 +1,19 @@
+{
+  "name": "post-csv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./",
+    "sample": "npm run start -- -f ./sample.csv -u http://somewhere -n"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.18.0"
+  },
+  "dependencies": {
+    "commander": "^2.19.0"
+  }
+}
