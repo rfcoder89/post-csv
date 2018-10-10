@@ -7,6 +7,7 @@ program
   .version('1.0')
   .option('-f, --file <value>', 'input csv file')
   .option('-u, --url <value>', 'server endpoint')
+  .option('-a, --auth', 'authentication token')
   .option('-n, --dry-run', 'perform a dry run')
   .parse(process.argv);
 
@@ -23,7 +24,9 @@ const postParams = fs
              case 2: acc.param2 = cur; break;
              }
              return acc;
-           }, {})
+           }, {
+             authentication: program.auth || 'no-token'
+           })
           );
 
 if (!program.dryRun) {
